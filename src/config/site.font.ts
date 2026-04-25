@@ -26,12 +26,12 @@ export type SiteFontConfig = {
  * Change only these values to update typography site-wide.
  */
 export const SITE_FONT_CONFIG: SiteFontConfig = {
-  sansFamily: 'Manrope',
-  displayFamily: 'Fraunces',
-  monoFamily: 'JetBrains Mono',
-  sansWeights: [400, 500, 600, 700, 800],
+  sansFamily: 'Plus Jakarta Sans',
+  displayFamily: 'Source Serif 4',
+  monoFamily: 'IBM Plex Mono',
+  sansWeights: [400, 500, 600, 700],
   displayWeights: [400, 500, 600, 700],
-  monoWeights: [400, 500, 700],
+  monoWeights: [400, 500, 600],
 }
 
 const normalizeWeights = (weights?: number[]) => {

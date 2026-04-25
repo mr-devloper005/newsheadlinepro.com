@@ -1,93 +1,83 @@
-import Link from "next/link";
-import { PageShell } from "@/components/shared/page-shell";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { mockTeamMembers } from "@/data/mock-data";
-import { SITE_CONFIG } from "@/lib/site-config";
-
-const highlights = [
-  { label: "Creators onboarded", value: "12k+" },
-  { label: "Bookmarks shared", value: "180k" },
-  { label: "Listings published", value: "8.6k" },
-];
+import Link from "next/link"
+import Image from "next/image"
+import { PageShell } from "@/components/shared/page-shell"
+import { Card, CardContent } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { SITE_CONFIG } from "@/lib/site-config"
 
 const values = [
-  { title: "Curated by people", description: "We believe trusted recommendations beat endless feeds." },
-  { title: "Designed for focus", description: "Clear, calm UI helps you find the next best resource fast." },
-  { title: "Built to share", description: "Collections make collaboration and knowledge flow effortless." },
-];
+  {
+    title: "Clarity over noise",
+    description: "Headlines, decks, and body copy stay legible so an announcement does not get lost in heavy UI chrome.",
+  },
+  {
+    title: "Built for filing cadence",
+    description: "From one release a quarter to weekly product news, the same template scales without breaking your brand voice.",
+  },
+  {
+    title: "Business context, not just text",
+    description: "Profiles and metadata help buyers, journalists, and partners connect the story to a real organization.",
+  },
+]
+
+const HERO =
+  "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1400&q=80&auto=format&fit=crop"
 
 export default function AboutPage() {
   return (
     <PageShell
       title={`About ${SITE_CONFIG.name}`}
-      description={`${SITE_CONFIG.name} is a modern platform for creators, communities, and curated business discovery.`}
+      description={`${SITE_CONFIG.name} is a press distribution and business profile platform for teams that need a serious public newsroom without enterprise bloat.`}
       actions={
         <>
           <Button variant="outline" asChild>
-            <Link href="/team">Meet the Team</Link>
+            <Link href="/pricing">Pricing</Link>
           </Button>
           <Button asChild>
-            <Link href="/contact">Contact Us</Link>
+            <Link href="/contact">Contact</Link>
           </Button>
         </>
       }
     >
-      <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+      <div className="grid gap-8 lg:grid-cols-[1fr_1.1fr] lg:items-start">
+        <div className="overflow-hidden rounded-2xl border border-border">
+          <div className="relative aspect-[4/3] w-full">
+            <Image src={HERO} alt="" fill className="object-cover" sizes="(min-width: 1024px) 40vw, 100vw" />
+          </div>
+        </div>
         <Card className="border-border bg-card">
-          <CardContent className="space-y-4 p-6">
-            <Badge variant="secondary">Our Story</Badge>
-            <h2 className="text-2xl font-semibold text-foreground">
-              A single home for knowledge, discovery, and community.
+          <CardContent className="space-y-4 p-6 sm:p-8">
+            <h2 className="text-2xl font-semibold text-foreground" style={{ fontFamily: "var(--font-display)" }}>
+              A newsroom surface for modern comms teams
             </h2>
-            <p className="text-sm text-muted-foreground">
-              {SITE_CONFIG.name} brings together publishing, listings, and social bookmarking so teams can move faster
-              and keep their best resources close.
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              {SITE_CONFIG.name} began as a response to crowded, template-heavy press pages. The team focused on
+              typography, hierarchy, and a distribution archive that feels like a product—not a PDF drop zone.
             </p>
-            <div className="grid gap-4 sm:grid-cols-3">
-              {highlights.map((item) => (
-                <div key={item.label} className="rounded-lg border border-border bg-secondary/40 p-4">
-                  <div className="text-2xl font-semibold text-foreground">{item.value}</div>
-                  <div className="text-xs text-muted-foreground">{item.label}</div>
-                </div>
-              ))}
-            </div>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              Today, the same stack supports long-form releases, business profiles, and search-friendly discovery. The
+              experience is tuned for comms, marketing, and agency partners who need speed without giving up control.
+            </p>
+            <ul className="mt-2 space-y-2 text-sm text-muted-foreground">
+              <li>· Headquartered in the US with a distributed media desk</li>
+              <li>· Security and privacy practices aligned with standard business SaaS expectations</li>
+            </ul>
           </CardContent>
         </Card>
-        <div className="space-y-4">
-          {values.map((value) => (
-            <Card key={value.title} className="border-border bg-card">
-              <CardContent className="p-6">
-                <h3 className="text-lg font-semibold text-foreground">{value.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{value.description}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
       </div>
 
-      <div className="mt-10 grid gap-6 md:grid-cols-3">
-        {mockTeamMembers.map((member) => (
-          <Card key={member.id} className="border-border bg-card transition-transform hover:-translate-y-1">
-            <CardContent className="p-6">
-              <div className="flex items-center gap-3">
-                <Avatar className="h-12 w-12">
-                  <AvatarImage src={member.avatar} alt={member.name} />
-                  <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
-                </Avatar>
-                <div>
-                  <p className="text-sm font-semibold text-foreground">{member.name}</p>
-                  <p className="text-xs text-muted-foreground">{member.role}</p>
-                </div>
-              </div>
-              <p className="mt-3 text-sm text-muted-foreground">{member.bio}</p>
-              <p className="mt-3 text-xs text-muted-foreground">{member.location}</p>
+      <div className="mt-10 grid gap-4 sm:grid-cols-3">
+        {values.map((value) => (
+          <Card key={value.title} className="border-border bg-card">
+            <CardContent className="p-5">
+              <h3 className="text-base font-semibold text-foreground" style={{ fontFamily: "var(--font-display)" }}>
+                {value.title}
+              </h3>
+              <p className="mt-2 text-sm text-muted-foreground">{value.description}</p>
             </CardContent>
           </Card>
         ))}
       </div>
     </PageShell>
-  );
+  )
 }
