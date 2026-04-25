@@ -8,9 +8,10 @@ export const SITE_RECIPE: SiteRecipe = {
   footerTemplate: 'editorial-footer',
   motionPack: 'minimal',
   primaryTask: 'mediaDistribution',
-  enabledTasks: ['mediaDistribution'],
+  enabledTasks: ['mediaDistribution', 'profile'],
   taskTemplates: {
     mediaDistribution: 'article-journal',
+    profile: 'profile-business',
   },
   manualOverrides: {
     navbar: true,
