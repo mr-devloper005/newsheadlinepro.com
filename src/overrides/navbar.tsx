@@ -14,7 +14,6 @@ import { NavbarAuthControls } from '@/components/shared/navbar-auth-controls'
 export const NAVBAR_OVERRIDE_ENABLED = true
 
 const supportLinks = [
-  { label: 'Pricing', href: '/pricing' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
 ]
@@ -24,7 +23,7 @@ export function NavbarOverride() {
   const pathname = usePathname()
   const { isAuthenticated } = useAuth()
   const enabled = SITE_CONFIG.tasks.filter((t) => t.enabled)
-  const taskNav = [enabled.find((t) => t.key === 'mediaDistribution'), enabled.find((t) => t.key === 'profile')].filter(
+  const taskNav = [enabled.find((t) => t.key === 'mediaDistribution')].filter(
     (t): t is (typeof enabled)[number] => Boolean(t)
   )
   const navItems = [
@@ -53,7 +52,7 @@ export function NavbarOverride() {
             className="h-8 bg-[var(--nhp-terra)] font-semibold text-stone-900 shadow-sm hover:brightness-105"
             asChild
           >
-            <Link href="/create/mediaDistribution">Submit press release</Link>
+            <Link href="/create/mediaDistribution">Submit press wire</Link>
           </Button>
         </div>
       </div>
@@ -61,9 +60,6 @@ export function NavbarOverride() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between gap-4 md:h-[4.5rem]">
           <Link href="/" className="group flex min-w-0 items-center gap-3">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full border border-white/15 bg-white/10 p-0.5">
-              <img src="/favicon.png?v=20260401" alt="" className="h-8 w-8 object-contain" width="32" height="32" />
-            </div>
             <div className="min-w-0">
               <span className="block truncate text-sm font-bold tracking-[-0.02em] text-white md:text-base">{SITE_CONFIG.name}</span>
               <span className="hidden text-[9px] font-medium uppercase tracking-[0.2em] text-white/50 sm:block">

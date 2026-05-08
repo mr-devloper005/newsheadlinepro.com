@@ -27,7 +27,7 @@ export function RegisterPageOverride() {
           Create your account
         </h1>
         <p className="mt-2 max-w-2xl mx-auto text-sm text-white/85">
-          Join {SITE_CONFIG.name} to file press releases, manage your company profile, and use the public newsroom.
+          Join {SITE_CONFIG.name} to file press wire, manage your company profile, and use the public newsroom.
         </p>
       </div>
 

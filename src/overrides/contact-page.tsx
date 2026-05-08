@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Building2, Clock, Mail, Phone } from 'lucide-react'
+
 import { NavbarShell } from '@/components/shared/navbar-shell'
 import { Footer } from '@/components/shared/footer'
 import { SITE_CONFIG } from '@/lib/site-config'
@@ -81,25 +81,7 @@ export function ContactPageOverride() {
                 <Image src={OFFICE} alt="Office" fill className="object-cover" sizes="400px" />
               </div>
             </div>
-            <div className="space-y-3 rounded-2xl border border-stone-200/80 bg-white p-6 text-sm text-stone-700">
-              <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-stone-500">Hours</h2>
-              <p className="flex items-center gap-2">
-                <Clock className="h-4 w-4 text-[var(--nhp-terra)]" />
-                Mon–Fri, 9–6 ET
-              </p>
-              <p className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-[var(--nhp-terra)]" />
-                <a href="tel:+18005550199" className="font-medium">+1 (800) 555-0199</a>
-              </p>
-              <p className="flex items-start gap-2">
-                <Mail className="mt-0.5 h-4 w-4 text-[var(--nhp-terra)]" />
-                <a href="mailto:press@newsheadlinepro.com" className="font-medium">press@newsheadlinepro.com</a>
-              </p>
-              <p className="flex items-start gap-2 text-stone-600">
-                <Building2 className="mt-0.5 h-4 w-4 text-[var(--nhp-terra)]" />
-                1200 Market Street, New York, NY
-              </p>
-            </div>
+
             <div className="rounded-2xl border border-stone-200/80 bg-[#0b1420] p-6 text-center text-white">
               <p className="text-sm">Need quick answers?</p>
               <Link href="/help" className="mt-2 inline-block rounded border border-white/20 px-4 py-2 text-sm font-semibold">FAQs</Link>

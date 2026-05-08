@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { FileText, User, Search, HelpCircle, FileEdit } from 'lucide-react'
+import { FileText, Search, HelpCircle, FileEdit } from 'lucide-react'
 import { SITE_CONFIG } from '@/lib/site-config'
 import { siteContent } from '@/config/site.content'
 
@@ -7,26 +7,20 @@ export const FOOTER_OVERRIDE_ENABLED = true
 
 const col = {
   distribution: [
-    { label: 'Submit press release', href: '/create/mediaDistribution', icon: FileEdit },
+    { label: 'Submit press wire', href: '/create/mediaDistribution', icon: FileEdit },
     { label: 'Press archive', href: '/updates', icon: FileText },
-    { label: 'Pricing', href: '/pricing', icon: null },
   ],
   account: [
     { label: 'Create account', href: '/register', icon: null },
     { label: 'Sign in', href: '/login', icon: null },
-    { label: 'Business profiles', href: '/profile', icon: User },
-    { label: 'Post a profile', href: '/create/profile', icon: null },
   ],
   resources: [
     { label: 'Search', href: '/search', icon: Search },
     { label: 'Help', href: '/help', icon: HelpCircle },
-    { label: 'Status', href: '/status', icon: null },
-    { label: 'Press kit', href: '/press', icon: null },
   ],
   company: [
     { label: 'About', href: '/about' },
     { label: 'Contact', href: '/contact' },
-    { label: 'Careers', href: '/careers' },
     { label: 'Privacy', href: '/privacy' },
     { label: 'Terms', href: '/terms' },
   ],
@@ -46,7 +40,7 @@ export function FooterOverride() {
       <div className="mx-auto max-w-7xl px-4 pb-10 pt-12 sm:px-6 lg:px-8">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-white/50">Press distribution</h3>
+            <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-white/50">Press wire</h3>
             <ul className="mt-4 space-y-3 text-sm text-white/85">
               {col.distribution.map((l) => (
                 <li key={l.label}>

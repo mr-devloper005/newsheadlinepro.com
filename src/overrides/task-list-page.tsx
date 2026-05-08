@@ -22,7 +22,7 @@ export async function TaskListPageOverride({ task, category }: { task: TaskKey; 
       <NavbarShell />
       <div className="border-b border-stone-200/80 bg-[#0b1420] py-12 text-center text-white sm:py-16">
         <h1 className="mx-auto max-w-3xl text-3xl font-semibold tracking-[-0.03em] sm:text-4xl" style={{ fontFamily: 'var(--font-display)' }}>
-          {task === 'mediaDistribution' ? 'Latest press releases' : taskConfig?.label || 'Directory'}
+          {task === 'mediaDistribution' ? 'Latest press wire' : taskConfig?.label || 'Directory'}
         </h1>
         {taskConfig?.description ? <p className="mx-auto mt-3 max-w-2xl text-sm text-white/80">{taskConfig.description}</p> : null}
       </div>

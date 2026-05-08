@@ -54,7 +54,7 @@ export const SITE_CONFIG: SiteConfig = {
     titleTemplate: `%s | ${siteIdentity.name}`,
     description: siteIdentity.description,
     keywords: [
-      'press release',
+      'press wire',
       'media distribution',
       'company news',
       'business profile',

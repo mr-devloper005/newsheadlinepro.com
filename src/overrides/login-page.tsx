@@ -11,7 +11,7 @@ import { Label } from '@/components/ui/label'
 export const LOGIN_PAGE_OVERRIDE_ENABLED = true
 
 const benefits = [
-  'File and review press releases in one place',
+  'File and review press wire in one place',
   'Match your public newsroom to your brand voice',
   'Connect distribution with business profile surfaces',
 ]
