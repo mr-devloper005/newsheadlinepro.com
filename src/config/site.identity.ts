@@ -1,7 +1,7 @@
 export const siteIdentity = {
   code: process.env.NEXT_PUBLIC_SITE_CODE || '4xxbt3f3st',
   name: process.env.NEXT_PUBLIC_SITE_NAME || 'Newsheadlinepro',
-  tagline: process.env.NEXT_PUBLIC_SITE_TAGLINE || 'Press release distribution and media reach',
+  tagline: process.env.NEXT_PUBLIC_SITE_TAGLINE || 'Press wire distribution and media reach',
   description:
     process.env.NEXT_PUBLIC_SITE_DESCRIPTION ||
     'Distribute your news, reach journalists, and build discoverable business profiles for partners and the public.',

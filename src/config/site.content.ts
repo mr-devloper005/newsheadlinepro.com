@@ -13,14 +13,14 @@ export const siteContent = {
     description:
       'Reach online channels and traditional media with structured releases, discoverable business profiles, and a reading experience designed for newsrooms and buyers.',
     primaryCta: {
-      label: 'View press releases',
+      label: 'View press wire',
       href: '/updates',
     },
     secondaryCta: {
       label: 'Post your profile',
       href: '/create/profile',
     },
-    searchPlaceholder: 'Search press releases and topics',
+    searchPlaceholder: 'Search press wire and topics',
     focusLabel: 'Headlines',
     featureCardBadge: 'Distribution',
     featureCardTitle: 'Your announcement stays scannable in archive and search.',
@@ -29,14 +29,14 @@ export const siteContent = {
   },
   home: {
     metadata: {
-      title: 'Press release distribution and media newsroom',
+      title: 'Press wire distribution and media newsroom',
       description:
-        'Distribute press releases, reach journalists, and share business updates with a modern, editorial presentation.',
-      openGraphTitle: 'Press release distribution and media newsroom',
+        'Distribute press wire, reach journalists, and share business updates with a modern, editorial presentation.',
+      openGraphTitle: 'Press wire distribution and media newsroom',
       openGraphDescription:
         'Publish and distribute company news, announcements, and business profiles in one place.',
       keywords: [
-        'press release',
+        'press wire',
         'media distribution',
         'company news',
         'business profile',
@@ -53,13 +53,13 @@ export const siteContent = {
     ],
     sideBadge: 'Why teams use it',
     sidePoints: [
-      'Press release archive with category-aware browsing.',
+      'Press wire archive with category-aware browsing.',
       'Authoritative article layout with media support.',
       'Public business profiles to complement your releases.',
       'A calm SaaS experience that does not get in the way of the copy.',
     ],
     primaryLink: {
-      label: 'Browse press releases',
+      label: 'Browse press wire',
       href: '/updates',
     },
     secondaryLink: {
@@ -115,7 +115,7 @@ export const taskPageMetadata: Record<Exclude<TaskKey, 'comment' | 'org' | 'soci
     description: 'Open PDFs and downloadable files.',
   },
   mediaDistribution: {
-    title: 'Latest press releases',
+    title: 'Latest press wire',
     description: 'Browse the archive of company announcements, media advisories, and product news.',
   },
 }
@@ -145,7 +145,7 @@ export const taskIntroCopy: Record<
   comment: { title: 'Comments', paragraphs: ['Commentary and response posts.'], links: [{ label: 'Home', href: '/' }] },
   org: { title: 'Organizations', paragraphs: ['Organization pages and entities.'], links: [{ label: 'Home', href: '/' }] },
   mediaDistribution: {
-    title: 'Press release archive',
+    title: 'Press wire archive',
     paragraphs: [
       'Browse issued announcements, advisories, and long-form company updates in a single, consistent reading view.',
       'Filter by category when you are researching a market, beat, or time window.',

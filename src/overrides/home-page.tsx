@@ -115,13 +115,7 @@ export async function HomePageOverride() {
               href="/create/mediaDistribution"
               className="inline-flex min-w-[200px] items-center justify-center rounded-md bg-[var(--nhp-terra)] px-6 py-3.5 text-sm font-semibold text-stone-900 shadow-lg shadow-black/20 transition hover:brightness-105"
             >
-              Submit press release
-            </Link>
-            <Link
-              href="/create/profile"
-              className="inline-flex min-w-[200px] items-center justify-center rounded-md border border-white/30 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10"
-            >
-              Post your profile
+              Submit press wire
             </Link>
           </div>
         </div>
@@ -131,7 +125,7 @@ export async function HomePageOverride() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
             <div className="nhp-fade-up order-2 lg:order-1">
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--nhp-muted-ink)]">Press release distribution</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--nhp-muted-ink)]">Press wire distribution</p>
               <h2 className="mt-4 text-3xl font-semibold tracking-[-0.03em] sm:text-4xl" style={{ fontFamily: 'var(--font-display)' }}>
                 From draft to a publish-ready page journalists can scan in seconds
               </h2>
@@ -191,23 +185,23 @@ export async function HomePageOverride() {
               </div>
             </div>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--nhp-muted-ink)]">Business profile</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--nhp-muted-ink)]">Press wire distribution</p>
               <h2 className="mt-4 text-3xl font-semibold tracking-[-0.03em] sm:text-4xl" style={{ fontFamily: 'var(--font-display)' }}>
-                A credible home for the company behind the news
+                Get your news in front of the right audience
               </h2>
               <p className="mt-4 text-base leading-relaxed text-[var(--nhp-muted-ink)]">
-                Pair every announcement with a profile that answers who you are, what you do, and how to reach a real
-                person—before the inbox even opens.
+                Distribute press wire directly to journalists, editors, and media outlets. Every submission is
+                formatted for newsrooms and ready to publish the moment it lands.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <Link
-                  href="/create/profile"
+                  href="/create/mediaDistribution"
                   className="inline-flex items-center justify-center rounded-md border border-stone-300/90 bg-white px-5 py-2.5 text-sm font-semibold text-stone-900 shadow-sm transition hover:border-stone-400"
                 >
-                  Create profile
+                  Submit press wire
                 </Link>
-                <Link href="/profile" className="text-sm font-semibold text-stone-700 underline-offset-4 hover:underline">
-                  View directory
+                <Link href="/updates" className="text-sm font-semibold text-stone-700 underline-offset-4 hover:underline">
+                  View press archive
                 </Link>
               </div>
             </div>
@@ -254,7 +248,7 @@ export async function HomePageOverride() {
             <div>
               <div className="mb-2 h-1 w-14 rounded-full bg-[var(--nhp-terra)]" />
               <h2 className="text-2xl font-semibold sm:text-3xl" style={{ fontFamily: 'var(--font-display)' }}>
-                Recent press releases
+                Recent press wire
               </h2>
               <ul className="mt-8 divide-y divide-border/90 border-y border-border/80">
                 {recent.map((post) => (
@@ -276,7 +270,7 @@ export async function HomePageOverride() {
                 href="/updates"
                 className="mt-8 inline-flex w-full items-center justify-center rounded-md border border-stone-300/90 bg-white px-4 py-2.5 text-sm font-semibold sm:w-auto"
               >
-                View all press releases
+                View all press wire
               </Link>
             </div>
 
@@ -337,13 +331,7 @@ export async function HomePageOverride() {
               href="/create/mediaDistribution"
               className="inline-flex min-w-[200px] items-center justify-center rounded-md bg-stone-900 px-6 py-3.5 text-sm font-semibold text-stone-50 transition hover:bg-stone-800"
             >
-              Submit press release
-            </Link>
-            <Link
-              href="/create/profile"
-              className="inline-flex min-w-[200px] items-center justify-center rounded-md border-2 border-[var(--nhp-terra)] bg-white px-6 py-3.5 text-sm font-semibold text-stone-900 transition hover:bg-stone-50"
-            >
-              Post your profile
+              Submit press wire
             </Link>
           </div>
         </div>

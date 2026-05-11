@@ -96,7 +96,7 @@ export function PressReleasesListClient({
   }, [category, dateRange, initialPosts, localPosts, q, task])
 
   if (!merged.length) {
-    return <div className="rounded-xl border border-dashed border-stone-300/90 bg-white/50 py-12 text-center text-sm text-stone-600">No press releases match these filters yet.</div>
+    return <div className="rounded-xl border border-dashed border-stone-300/90 bg-white/50 py-12 text-center text-sm text-stone-600">No press wire match these filters yet.</div>
   }
 
   return (
@@ -143,9 +143,6 @@ export function PressReleasesListClient({
         {merged.map((post) => {
           const localOnly = (post as { localOnly?: boolean }).localOnly
           const href = localOnly ? `/local/${task}/${post.slug}` : buildPostUrl(task, post.slug)
-          const d = post.publishedAt
-            ? new Date(post.publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
-            : ''
           return (
             <Link
               key={post.id}
@@ -169,7 +166,6 @@ export function PressReleasesListClient({
                   {post.title}
                 </h2>
                 {post.summary ? <p className="mt-2 line-clamp-2 text-sm text-stone-600">{stripHtml(post.summary)}</p> : null}
-                <p className="mt-auto pt-3 text-xs text-stone-500">{d}</p>
               </div>
             </Link>
           )

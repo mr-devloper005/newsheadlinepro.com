@@ -30,9 +30,6 @@ export default function AboutPage() {
       description={`${SITE_CONFIG.name} is a press distribution and business profile platform for teams that need a serious public newsroom without enterprise bloat.`}
       actions={
         <>
-          <Button variant="outline" asChild>
-            <Link href="/pricing">Pricing</Link>
-          </Button>
           <Button asChild>
             <Link href="/contact">Contact</Link>
           </Button>
