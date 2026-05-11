@@ -79,7 +79,7 @@ export async function TaskDetailPageOverride({ task, slug }: { task: TaskKey; sl
           </div>
           <div className="mx-auto max-w-3xl px-4 sm:px-6">
             <p className="pt-4 text-sm text-stone-500">
-              {dateStr} · {author}
+              {author}
             </p>
             <div className="prose article-content mt-6 max-w-none text-stone-800">
               <RichContent html={html} />
@@ -137,7 +137,6 @@ export async function TaskDetailPageOverride({ task, slug }: { task: TaskKey; sl
         ) : null}
         <p className="mt-4 text-sm text-stone-600">
           {author}
-          {dateStr ? <span> · {dateStr}</span> : null}
         </p>
         <div className="mt-5 flex flex-wrap gap-2">
           <a
