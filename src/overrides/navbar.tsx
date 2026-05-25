@@ -7,7 +7,6 @@ import { Menu, Search, X } from 'lucide-react'
 import { SITE_CONFIG } from '@/lib/site-config'
 import { useAuth } from '@/lib/auth-context'
 import { Button } from '@/components/ui/button'
-import { siteContent } from '@/config/site.content'
 import { cn } from '@/lib/utils'
 import { NavbarAuthControls } from '@/components/shared/navbar-auth-controls'
 
@@ -59,13 +58,8 @@ export function NavbarOverride() {
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between gap-4 md:h-[4.5rem]">
-          <Link href="/" className="group flex min-w-0 items-center gap-3">
-            <div className="min-w-0">
-              <span className="block truncate text-sm font-bold tracking-[-0.02em] text-white md:text-base">{SITE_CONFIG.name}</span>
-              <span className="hidden text-[9px] font-medium uppercase tracking-[0.2em] text-white/50 sm:block">
-                {siteContent.navbar.tagline}
-              </span>
-            </div>
+          <Link href="/" className="group flex min-w-0 items-center">
+            <img src="/logo.png" alt="Logo" className="h-10 w-auto object-contain" />
           </Link>
 
           <nav className="hidden items-center gap-1 md:flex" aria-label="Main">

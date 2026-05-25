@@ -93,6 +93,7 @@ export function FooterOverride() {
           </div>
         </div>
 
+
         <div className="mt-12 border-t border-white/10 pt-6 text-xs text-white/50">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <p>
