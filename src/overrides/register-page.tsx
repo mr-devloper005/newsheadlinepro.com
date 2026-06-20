@@ -57,10 +57,6 @@ export function RegisterPageOverride() {
                 </li>
               ))}
             </ul>
-            <p className="pt-1 text-xs text-stone-600">Plans and add-ons are available on the pricing page when you are ready to scale.</p>
-            <Button variant="outline" className="w-full border-stone-300/90 text-stone-900 hover:bg-white" asChild>
-              <Link href="/pricing">View pricing</Link>
-            </Button>
           </aside>
 
           <div className="rounded-2xl border border-stone-200/90 bg-white p-6 shadow-[0_20px_50px_rgba(28,25,23,0.06)] sm:p-8">
